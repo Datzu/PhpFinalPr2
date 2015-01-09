@@ -16,6 +16,11 @@ and open the template in the editor.
             
         ?>
         
-        <table id="letraMasGrande"></table>
+        <table id="letraMasGrande">
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    
     </body>
 </html>
