@@ -18,7 +18,7 @@ and open the template in the editor.
         
         <table id="letraMasGrande">
             <tr>
-                <td></td>
+                <td>Lalala</td>
             </tr>
         </table>
     
