@@ -8,10 +8,14 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link href="styles.css" />
     </head>
     <body>
         <?php
             echo "HelloWorld!";
+            
         ?>
+        
+        <table id="letraMasGrande"></table>
     </body>
 </html>
