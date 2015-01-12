@@ -8,16 +8,15 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <link href="styles.css" />
     </head>
     <body>
         <?php
-            session_start();
-            include 'model/classes/Concert.php';
-            $_SESSION['concerts'][0] = new Concert("titulo1", "los chunguitos", "01/01/10");
-            include 'controls/mainController.php';  
-            session_destroy();
+            if (isset($_SESSION['concerts'])){
+                include 'model/showConcerts.php';
+                showConcerts();
+            }else{
+                echo "No concerts.";
+            }
         ?>
-    
     </body>
 </html>
