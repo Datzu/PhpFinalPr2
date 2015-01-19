@@ -12,11 +12,21 @@ and open the template in the editor.
     </head>
     <body>
         <?php
+        
             session_start();
+            
+            
+            
             include 'model/classes/Concert.php';
-            $_SESSION['concerts'][0] = new Concert("titulo1", "los chunguitos", "01/01/10");
-            include 'controls/mainController.php';  
+            
+            for ($i = 0; $i < 10; $i++) {
+                $_SESSION['concerts'][$i] = new Concert("title".$i, "group".$i, date("d/m/y"));
+            }
+            
+            include 'controls/mainController.php';
+            
             session_destroy();
+            
         ?>
     
     </body>

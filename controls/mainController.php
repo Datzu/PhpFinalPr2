@@ -11,10 +11,11 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-            if (isset($_SESSION['concerts'])){
+            if (isset($_SESSION['concerts'])) {
+                
                 include 'model/showConcerts.php';
-                showConcerts();
-            }else{
+                
+            } else {
                 echo "No concerts.";
             }
         ?>
