@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-            if (isset($_SESSION['concerts'])) {
-                
-                include 'model/showConcerts.php';
-                
-            } else {
-                echo "No concerts.";
-            }
-        ?>
-    </body>
-</html>
+<?php
+    include 'views/showErrors.php';
+    include 'views/addConcert.php';
+    if (isset($_SESSION['concerts'])) {
+        include './views/showConcerts.php';
+    } else {
+        echo "No concerts.";
+    }
+?>

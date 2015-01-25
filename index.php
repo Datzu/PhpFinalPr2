@@ -13,19 +13,13 @@ and open the template in the editor.
     <body>
         <?php
         
+            include 'model/classes/Concert.php';
             session_start();
             
-            
-            
-            include 'model/classes/Concert.php';
-            
-            for ($i = 0; $i < 10; $i++) {
-                $_SESSION['concerts'][$i] = new Concert("title".$i, "group".$i, date("d/m/y"));
-            }
-            
+            echo "<a href='closeSession.php'><button>Close session</button></a>";
+            echo "<a href='test.php'><button>Cuando el delete no va... ¡pulsa este botón! AKA Botón del pánico</button></a>";
+            echo "<br>";
             include 'controls/mainController.php';
-            
-            session_destroy();
             
         ?>
     
