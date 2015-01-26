@@ -12,6 +12,14 @@
             <td>Date:</td>
             <td><input type="text" name="date" /></td>
         </tr>
+        <tr>
+            <td>City:</td>
+            <td><input type="text" name="city" /></td>
+        </tr>
+        <tr>
+            <td>Location:</td>
+            <td><input type="text" name="location" /></td>
+        </tr>
     </table>
     <input type="submit"/>
 </form>

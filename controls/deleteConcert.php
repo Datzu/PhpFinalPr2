@@ -3,7 +3,6 @@
     include '../model/classes/Concert.php';
     
     session_start();
-    
     unset($_SESSION['concerts'][$_GET['id']]);
     if (count($_SESSION['concerts']) == 0) {
         unset($_SESSION['concerts']);

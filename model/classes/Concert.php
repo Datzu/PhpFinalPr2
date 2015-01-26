@@ -5,9 +5,10 @@ class Concert {
     private $title;
     private $group;
     private $date;
+    private $city;
+    private $location;
 
     public function __construct($id, $title, $group, $date, $city, $location) {
-        echo $id;
         $this->id = $id;
         $this->title = $title;
         $this->group = $group;
@@ -43,17 +44,23 @@ class Concert {
     public function getLocation() {
         return $this->location;
     }
-
+    
+    public function delete() {
+        unset($this);
+    }
 
     public function show() {
-        include_once './views/addButtons.php';
         echo "[(Id: ".$this->id.") - "
                 . "(Title: ".$this->title.") - "
                 . "(Group: ".$this->group.") - "
                 . "(Date: ".$this->date.") - "
                 . "(City: ".$this->city.") - "
                 . "(Location: ".$this->location.")]";
-        echo getButton($this->id);
+    }
+    
+    public function showButtons() {
+        echo "<a href='./views/modifyConcert.php?id=".$this->id."'><input type='button' value='Modify'/></a>";
+        echo "<a href='./views/deleteConcert.php?id=".$this->id."'><input type='button' value='Delete'/></a>";
     }
     
 }
