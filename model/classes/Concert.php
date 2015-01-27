@@ -17,8 +17,24 @@ class Concert {
         $this->location = $location;
     }
     
-    public function modifyDate($date) {
+    public function setTitle($title) {
+        $this->title = $title;
+    }
+    
+    public function setGroup($group) {
+        $this->group = $group;
+    }
+    
+    public function setDate($date) {
         $this->date = $date;
+    }
+    
+    public function setCity($city) {
+        $this->city = $city;
+    }
+    
+    public function setLocation($location) {
+        $this->location = $location;
     }
     
     public function getId() {

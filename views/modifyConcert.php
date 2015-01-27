@@ -8,7 +8,7 @@
 
 ?>
 
-<form action="../controls/modifyConcert.php" method="post">
+<form action="../controls/modifyConcert.php?id=<?php echo $concert->getId(); ?>" method="post">
     <table>
         <tr>
             <td>Title:</td>
