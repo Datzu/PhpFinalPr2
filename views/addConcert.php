@@ -1,4 +1,4 @@
-<form action="./controls/addConcert.php" method="post">
+<form action="index.php" method="post">
     <table>
         <tr>
             <td>Title:</td>
@@ -21,5 +21,7 @@
             <td><input type="text" name="location" /></td>
         </tr>
     </table>
-    <input type="submit"/>
+    <input type="text" name="insert" value="0" hidden />
+    <input type="text" name="button" value="add" hidden />
+    <input name="submit" type="submit"/>
 </form>

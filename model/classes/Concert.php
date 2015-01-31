@@ -71,12 +71,17 @@ class Concert {
                 . "(Group: ".$this->group.") - "
                 . "(Date: ".$this->date.") - "
                 . "(City: ".$this->city.") - "
-                . "(Location: ".$this->location.")]";
+                . "(Location: ".$this->location.")] ";
+        echo $this->showButtons();
     }
     
     public function showButtons() {
-        echo "<a href='./views/modifyConcert.php?id=".$this->id."'><input type='button' value='Modify'/></a>";
-        echo "<a href='./views/deleteConcert.php?id=".$this->id."'><input type='button' value='Delete'/></a>";
+        echo "<form action='index.php' method='post'>";
+        echo "<input type='text' name='id' value='$this->id' hidden /><input type='text' name='button' value='delete' hidden /><input type='submit' name='submit' value='Delete'/></a> ";
+        echo "</form>";
+        echo "<form action='index.php' method='post'>";
+        echo "<input type='text' name='id' value='$this->id' hidden /><input type='text' name='modify' value='0' hidden /><input type='text' name='button' value='modify' hidden /><input type='submit' name='submit' value='Modify'/></a>";
+        echo "</form>";
     }
     
 }

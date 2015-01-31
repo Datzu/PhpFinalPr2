@@ -1,14 +1,8 @@
 <?php
-
-    include '../model/classes/Concert.php';
-    
-    session_start();
-    
-    $concert = $_SESSION['concerts'][$_GET['id']];
-
+    $concert = $_SESSION['concerts'][$_POST['id']];
 ?>
 
-<form action="../controls/modifyConcert.php?id=<?php echo $concert->getId(); ?>" method="post">
+<form action="index.php" method="post">
     <table>
         <tr>
             <td>Title:</td>
@@ -31,6 +25,9 @@
             <td><input type="text" name="location" value=<?php echo $concert->getLocation(); ?> /></td>
         </tr>
     </table>
-    <input type="submit" value="Modify"/>
+    <input type='text' name='id' value='<?php echo $concert->getId(); ?>' hidden />
+    <input type='text' name='modify' value='1' hidden />
+    <input type='text' name='button' value='modify' hidden />
+    <input type="submit" name="submit" value="Modify"/>
 </form>
-<a href='../index.php'><button>Cancel</button></a>
+<a href='./index.php'><button>Cancel</button></a>
